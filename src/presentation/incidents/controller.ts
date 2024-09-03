@@ -23,12 +23,12 @@ export class IncidentController{
                     lat : lat,
                     lng : lng
                 });
-                const emailService = new EmailService();
-                await emailService.sendEmail({
-                    to: "andres.nunez01@outlook.com",
-                    subject: title,
-                    htmlBody: `<h1>${description}</h1>`
-                });
+                // const emailService = new EmailService();
+                // await emailService.sendEmail({
+                //     to: "andres.nunez01@outlook.com",
+                //     subject: title,
+                //     htmlBody: `<h1>${description}</h1>`
+                // });
                 return res.json(newIncident)
             } catch (error) {
                 

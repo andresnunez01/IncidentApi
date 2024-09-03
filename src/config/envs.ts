@@ -8,4 +8,5 @@ export const envs = {
     MAILER_SERVICE: env.get("MAILER_SERVICE").required().asString(),
     MAILER_EMAIL: env.get("MAILER_EMAIL").required().asString(),
     MAILER_ACCESS_TOKEN: env.get("MAILER_ACCESS_TOKEN").required().asString(),
+    MAPBOX_ACCESS_TOKEN: env.get("MAPBOX_ACCESS_TOKEN").required().asString(),
 };

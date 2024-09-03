@@ -18,6 +18,11 @@ jobs:
 
         - name: Build Docker Image
           run: docker build -t andresnunez01/incident-api:${{ github.sha }} .
+          
+        - name: Tag Latest
+          run: docker tag andresnunez01/incident-api:${{ github.sha }} andresnunez01/incident-api:latest
 
         - name: Push Docker Image
-          run: docker push andresnunez01/incident-api:${{ github.sha }}
+          run: |
+            docker push andresnunez01/incident-api:${{ github.sha }}
+            docker push andresnunez01/incident-api:latest

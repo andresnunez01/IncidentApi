@@ -15,6 +15,11 @@ const incidentSchema = new mongoose.Schema({
     lng:{
         type: Number,
         required: true
+    },
+    isEmailSent:{
+        type: Boolean,
+        required: false,
+        default: false
     }
 });
 
